@@ -8,9 +8,7 @@ public class Task1
     {
         String[] array = { "G", "e", "e", "k", "s" };
 
-        IntStream.range(0, array.length).
-
-                mapToObj(index -> String.format("%d -> %s",
+        IntStream.range(0, array.length).filter(i -> i%2 == 0).mapToObj(index -> String.format("%d -> %s",
                         index, array[index])).forEach(System.out::println);
 
 
